@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
+const mail = nodemailer.mail;
 
 let transporter = nodemailer.createTransport({
   service: 'Yandex',
@@ -77,12 +78,13 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res){
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-        return console.log(error);
-    }
-    console.log('Message %s sent: %s', info.messageId, info.response);
-  });
+  // transporter.sendMail(mailOptions, (error, info) => {
+  //   if (error) {
+  //       return console.log(error);
+  //   }
+  //   console.log('Message %s sent: %s', info.messageId, info.response);
+  // });
+  mail(mailOptions);
 });
 
 module.exports = router;
