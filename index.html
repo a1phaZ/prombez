@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="https://pingendo.github.io/templates/blank/theme.css" type="text/css"> </head>
+  <link rel="stylesheet" href="public\css\style.css" type="text/css">
+  <link rel="stylesheet" href="public\css\style.css">
+</head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-light text-center fixed-top bg-faded text-capitalize">
@@ -35,14 +37,10 @@
       </div>
     </div>
   </nav>
-  <div class="bg-primary d-flex h-100 align-items-center text-center" id="home" style="background-image: url(&quot;profesii.jpg&quot;);">
+  <div class="bg-primary d-flex h-100 align-items-center text-center opaque opaque-fade-out" id="home" style="position: relative; background-image: url(&quot;file:///D:/Work/inst/public/img/bg.jpg&quot;);">
     <div class="container">
       <div class="row text-gray-dark">
-        <div class="text-right col-sm-12 col-md-6">
-          <h1 class="display-1 text-gray-dark">COVER</h1>
-          <p class="lead text-gray-dark">Lorem ipsum dolor sit amet, consectetur adipisici elit.</p>
-        </div>
-        <div class="col-md-6">
+        <div class="w-100 col-sm-12 col-md-6" style="background-color: rgba(247,247,247,.7);">
           <form class="text-left">
             <div class="form-group"><label>Выберите город<br></label><select class="form-control" name="city"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div>
             <div class="form-group"><label>Выберите профессию<br></label><select class="form-control" name="job"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div>
@@ -54,6 +52,7 @@
               <input type="hidden" class="form-control form-control-sm" placeholder="Text"> <small class="form-text text-success" id="msg-status">Help text here.</small></div>
           </form>
         </div>
+        <div class="col-md-6"></div>
       </div>
     </div>
   </div>

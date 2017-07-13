@@ -1,0 +1,35 @@
+mixin city(d_city)
+  option(value= d_city)= d_city
+
+mixin prof(prof)
+  option(value= prof)= prof
+
+mixin form(city, prof)
+  form.text-left(method='POST')
+    .form-group
+      label
+        | Выберите город
+        br
+      select.form-control(name='city')
+        each d_city in city
+          +city(d_city)
+    .form-group
+      label
+        | Выберите профессию
+        br
+      select.form-control(name='prof')
+        each s_prof in prof
+          +prof(s_prof)
+    .form-group
+      label
+        | Введите телефон
+        br
+      input.form-control(type='phone', placeholder='Введите телефон', name='phone')
+    button.btn.btn-success.btn-lg(type='submit')
+      | Отправить заявку
+      br
+    .form-group
+      input.form-control.form-control-sm(type='hidden', placeholder='Text')
+      small#msg-status.form-text.text-success Help text here.
+
++form(city, prof)

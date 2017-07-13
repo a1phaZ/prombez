@@ -1,0 +1,92 @@
+extends layout
+
+block content
+    nav.navbar.navbar-expand-md.navbar-light.text-center.fixed-top.bg-faded.text-capitalize
+      .container
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbar2SupportedContent', aria-controls='navbar2SupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbar2SupportedContent.collapse.navbar-collapse.text-center.justify-content-center
+          ul.navbar-nav
+            li.nav-item.active
+              a.nav-link(href='#home')
+                | Главная
+                br
+            li.nav-item
+              a.nav-link(href='#heading1')
+                | Секция 1
+                br
+            li.nav-item
+              a.nav-link(href='#teachers') Преподаватели
+            li.nav-item
+              a.nav-link(href='#heading2')
+                | Секция 2
+                br
+            li.nav-item
+              a.nav-link(href='#contact')
+                | Контакты
+                br
+    #home.py-5.bg-primary.d-flex.h-100.align-items-center.text-center.opaque.opaque-fade-out(style='position: relative; background-image: url("./img/bg.jpg");min-height:100vh;')
+      .container
+        .row.text-gray-dark
+          .col-sm-12.col-md-6(style='background-color: rgba(247,247,247,.7);')  
+            include form
+          .col-md-6
+    #heading1.py-5.section
+      .container
+        .row
+          .col-md-6
+            img.img-fluid.img-thumbnail(src='https://pingendo.com/assets/photos/wireframe/photo-1.jpg')
+          .col-md-6
+            h1.text-primary
+              | HEADING 1
+              br
+            p.lead
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+              | pretium quis, sem.
+    #teachers.py-5.text-center
+      .container
+        .row
+          .col-md-4
+            img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
+            h3 John Doe
+            p Developer
+          .col-md-4
+            img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
+            h3 John Doe
+            p Developer
+          .col-md-4
+            img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
+            h3 John Doe
+            p Developer
+    #heading2.py-5.section
+      .container
+        .row
+          .col-md-6
+            h1.text-primary(id='')
+              | HEADING 2
+              br
+            p.lead
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+              | pretium quis, sem.
+          .col-md-6
+            img.img-fluid(src='https://pingendo.com/assets/photos/wireframe/photo-1.jpg')
+    #contact.bg-faded.py-5
+      .container
+        .row
+          .col-md-6
+            h1.pi-item COMPANY
+            p
+              strong Company name, Inc.
+              br
+              | 795 Folsom Ave, Suite 600
+              br
+              | San Francisco, CA 94107
+              br
+              abbr(title='Phone') P:
+              | (123) 456-7890
+          .col-md-6
+            h1.pi-item CONTACT
+            include form
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+    script(src='https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js')
