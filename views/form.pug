@@ -30,6 +30,11 @@ mixin form(city, prof)
       br
     .form-group
       input.form-control.form-control-sm(type='hidden', placeholder='Text')
-      small#msg-status.form-text.text-success Help text here.
+      - if (messages.success)
+          small#msg-status.form-text.text-success
+            span= messages.success
+      - if (messages.error)
+          small#msg-status.form-text.text-error
+            span= messages.error
 
 +form(city, prof)
