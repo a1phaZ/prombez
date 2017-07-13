@@ -8,7 +8,7 @@ let transporter = nodemailer.createTransport({
   auth: {
     XOAuth2: {
       user: process.env.USER,
-      pass: process.env.PASS,
+      // pass: process.env.PASS,
       clientId:  process.env.ID,
       clientSecret: process.env.SECRET,
       refreshToken: process.env.TOKEN
