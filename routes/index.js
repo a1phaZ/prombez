@@ -86,11 +86,12 @@ router.post('/', function(req, res){
     if (error) {
         console.log(error);
         req.flash('error', 'Возникла ошибка, сообщение не отправлено! Повторите попытку позже.');
-        return res.redirect('/');
+    } else {
+      console.log('Message %s sent: %s', info.messageId, info.response);
+      req.flash('success', 'Сообщение отправлено.');
     }
-    console.log('Message %s sent: %s', info.messageId, info.response);
-    req.flash('success', 'Сообщение отправлено.');
-    res.redirect('/');
+    
+    return res.redirect('/');
   });
 });
 
