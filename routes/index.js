@@ -2,18 +2,16 @@ var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
+var mg = require('nodemailer-mailgun-transport');
 
-let transporter = nodemailer.createTransport({
-  service: 'Gmail',
+var auth = {
   auth: {
-    type: 'OAuth2',
-    user: process.env.USER,
-    // pass: process.env.PASS,
-    clientId:  process.env.ID,
-    clientSecret: process.env.SECRET,
-    refreshToken: process.env.TOKEN
+    api_key: process.env.KEY,
+    domain: process.env.DOMAIN
   }
-});
+}
+
+let transporter = nodemailer.createTransport(mg(auth));
 
 // setup email data with unicode symbols
 let mailOptions = {
@@ -90,10 +88,10 @@ router.post('/', function(req, res){
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         console.log(error);
-        // req.flash('error', 'Возникла ошибка, сообщение не отправлено! Повторите попытку позже.');
+        req.flash('error', 'Возникла ошибка, сообщение не отправлено! Повторите попытку позже.');
     } else {
       console.log('Message %s sent: %s', info.messageId, info.response);
-      // req.flash('success', 'Сообщение отправлено.');
+      req.flash('success', 'Сообщение отправлено.');
     }
     
     return res.redirect('/');
