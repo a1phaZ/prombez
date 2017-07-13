@@ -3,7 +3,7 @@ var router = express.Router();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
 
-let transporter = nodemailer.createTransport('SMTP', {
+let transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
     XOAuth2: {
