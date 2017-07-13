@@ -3,16 +3,15 @@ var router = express.Router();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
 
-let transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport("SMTP", {
   service: 'Gmail',
   auth: {
-    XOAuth2: {
-      user: process.env.USER,
-      // pass: process.env.PASS,
-      clientId:  process.env.ID,
-      clientSecret: process.env.SECRET,
-      refreshToken: process.env.TOKEN
-    }
+    type: 'OAuth2',
+    user: process.env.USER,
+    // pass: process.env.PASS,
+    clientId:  process.env.ID,
+    clientSecret: process.env.SECRET,
+    refreshToken: process.env.TOKEN
   }
 });
 
