@@ -21,6 +21,11 @@ let mailOptions = {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  res.locals.msg = {
+    display: false,
+    msg: '',
+    class: ''
+  };
   res.render('index', {
     title: 'Express',
     city: [
@@ -79,9 +84,13 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res){
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-        return console.log(error);
+        console.log(error);
+        req.flash('error', 'Возникла ошибка, сообщение не отправлено! Повторите попытку позже.');
+        return res.redirect('/');
     }
     console.log('Message %s sent: %s', info.messageId, info.response);
+    req.flash('success', 'Сообщение отправлено.');
+    res.redirect('/');
   });
 });
 
