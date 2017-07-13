@@ -24,7 +24,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
-  secret: 'asdfoak pmasmdlkfamsd,xnocvi a;lsdk fa',
+  secret: 'keyboard cat',
   resave: false,
   saveUninitialized: true,
   cookie: { secure: true }
