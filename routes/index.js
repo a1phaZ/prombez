@@ -85,10 +85,10 @@ router.post('/', function(req, res){
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
         console.log(error);
-        req.flash('error', 'Возникла ошибка, сообщение не отправлено! Повторите попытку позже.');
+        // req.flash('error', 'Возникла ошибка, сообщение не отправлено! Повторите попытку позже.');
     } else {
       console.log('Message %s sent: %s', info.messageId, info.response);
-      req.flash('success', 'Сообщение отправлено.');
+      // req.flash('success', 'Сообщение отправлено.');
     }
     
     return res.redirect('/');
