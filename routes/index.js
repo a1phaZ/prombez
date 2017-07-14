@@ -9,13 +9,10 @@ var auth = {
 	auth: {
 		user: process.env.USER,
 		pass: process.env.PASS
-	},
-	tls: {
-		rejectUnauthorized: false
 	}
 }
 
-let transporter = nodemailer.createTransport(auth);
+let transporter = nodemailer.createTransport("SMTP", auth);
 
 // setup email data with unicode symbols
 let mailOptions = {
