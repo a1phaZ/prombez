@@ -2,13 +2,17 @@ var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
-var mg = require('nodemailer-mailgun-transport');
+//var mg = require('nodemailer-mailgun-transport');
 
 var auth = {
-  auth: {
-    api_key: process.env.KEY,
-    domain: process.env.DOMAIN
-  }
+  service: "Gmail",
+	auth: {
+		user: process.env.USER,
+		pass: process.env.PASS
+	},
+	tls: {
+		rejectUnauthorized: false
+	}
 }
 
 let transporter = nodemailer.createTransport(mg(auth));
