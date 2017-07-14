@@ -12,7 +12,7 @@ var auth = {
 	}
 }
 
-let transporter = nodemailer.createTransport("SMTP", auth);
+let transporter = nodemailer.createTransport(auth);
 
 // setup email data with unicode symbols
 let mailOptions = {
