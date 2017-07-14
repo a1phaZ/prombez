@@ -5,7 +5,7 @@ const xoauth2 = require('xoauth2');
 //var mg = require('nodemailer-mailgun-transport');
 
 var auth = {
-  service: "Gmail",
+  service: "Yandex",
 	auth: {
 		user: process.env.USER,
 		pass: process.env.PASS
