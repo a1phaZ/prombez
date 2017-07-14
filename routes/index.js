@@ -15,7 +15,7 @@ var auth = {
 	}
 }
 
-let transporter = nodemailer.createTransport(mg(auth));
+let transporter = nodemailer.createTransport(auth);
 
 // setup email data with unicode symbols
 let mailOptions = {
