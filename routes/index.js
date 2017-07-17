@@ -79,18 +79,19 @@ router.post('/', function(req, res){
 
   let mailOptions = {
     from: '"info.prombez" <info.prombez@yandex.ru>', // sender address
-    to: n<10?process.env.em1:process.env.em2, // list of receivers
+    to: n<10?'process.env.em1':'process.env.em2', // list of receivers
     subject: 'Заявка на обучение ✔', // Subject line
     text: '', // plain text body
     // html: '<b>Hello world ?</b>' // html body
   };
 
   mailOptions.text += req.body.name + ' ';
-  mailOptions.text += 'отправил запрос на обучение по профессии' + req.body.prof + '. ';
+  mailOptions.text += 'отправил запрос на обучение по профессии: ' + req.body.prof + '. ';
   mailOptions.text += 'Город: '+ req.body.city+ '. ';
   mailOptions.text += 'Телефон: '+ req.body.phone;
 
-  if (n) {
+  // console.log(mailOptions);
+  if (n > -1) {
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
           console.log(error);
