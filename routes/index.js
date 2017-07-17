@@ -1,8 +1,6 @@
 var express = require('express');
 var router = express.Router();
 const nodemailer = require('nodemailer');
-// const xoauth2 = require('xoauth2');
-//var mg = require('nodemailer-mailgun-transport');
 
 var auth = {
   service: "Yandex",
@@ -68,7 +66,7 @@ const prof = [
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'Express',
+    title: 'ЧУ ДПО "Верхнекамский технический институт"',
     city: city,
     prof: prof
   });
@@ -77,8 +75,8 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res){
   const n = city.indexOf(req.body.city);
 
-  console.log(req.body);
-  console.log(n);
+  // console.log(req.body);
+  // console.log(n);
 
   let mailOptions = {
     from: '"info.prombez" <info.prombez@yandex.ru>', // sender address
