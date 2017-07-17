@@ -77,6 +77,9 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res){
   const n = city.indexOf(req.body.city);
 
+  console.log(req.body);
+  console.log(n);
+
   let mailOptions = {
     from: '"info.prombez" <info.prombez@yandex.ru>', // sender address
     to: n<10?'alphaZ_@e1.ru':'pride.ots@gmail.com', // list of receivers
