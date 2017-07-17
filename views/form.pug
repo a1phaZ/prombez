@@ -22,6 +22,11 @@ mixin form(city, prof)
           +prof(s_prof)
     .form-group
       label
+        | Введите имя
+        br
+      input.form-control(type='text', placeholder='Введите имя', name='name')
+    .form-group
+      label
         | Введите телефон
         br
       input.form-control(type='phone', placeholder='Введите телефон', name='phone')
