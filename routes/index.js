@@ -80,7 +80,7 @@ router.post('/', function(req, res){
 
   let mailOptions = {
     from: '"info.prombez" <info.prombez@yandex.ru>', // sender address
-    to: n<10?'alphaZ_@e1.ru':'pride.ots@gmail.com', // list of receivers
+    to: n<10?'pbiot@mail.ru':'pbiot-perm@mail.ru', // list of receivers
     subject: 'Заявка на обучение ✔', // Subject line
     text: '', // plain text body
     // html: '<b>Hello world ?</b>' // html body
