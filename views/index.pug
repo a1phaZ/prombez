@@ -11,10 +11,6 @@ block content
             a.nav-link(href='#home')
               | Главная
               br
-          //- li.nav-item
-          //-   a.nav-link(href='#about')
-          //-     | О нас
-          //-     br
           li.nav-item
             a.nav-link(href='#teachers') Преподаватели
           li.nav-item
@@ -25,13 +21,14 @@ block content
             a.nav-link(href='#contact')
               | Контакты
               br
+          li.nav-item
+            a.nav-link(href='#map')
+              | Карта
+              br
   #home.py-5.bg-primary.d-flex.h-100.align-items-center.text-center.opaque.opaque-fade-out(style='position: relative; background-image: url("./img/bg.jpg");min-height:100vh;')
     .container-fluid(style='background-color: rgba(247,247,247,.7);') 
       .row.text-gray-dark
-        .col-sm-12.col-md-6
-          h1.pi-item Заявка на обучение 
-          include form
-        .col-md-6
+        .col-md-6.divider-left
           h1.pi-item
             strong
               | «Верхнекамский технический институт»
@@ -41,6 +38,9 @@ block content
             | Условия обучения отвечают современным требованиям, а профессионализм преподавательского состава и наличие учебной и методической литературы позволяют обеспечить достойное обучение слушателей.
             br
             | Успешный опыт сотрудничества с организациями Пермского края позволяет нам обеспечивать потребности заказчиков в области обучения специалистов и персонала организаций по промышленной безопасности и охране труда.
+        .col-sm-12.col-md-6
+          h1.pi-item Заявка на обучение 
+          include form
   //- #about.py-5.section
   //-   .container
   //-     .row
@@ -129,20 +129,22 @@ block content
           p
             strong ЧУ ДПО "Верхнекамский технический институт" 
             br
-            | 618548, Россия, Пермский край,
-            br
-            | г.Соликамск, ул.Черняховского, 4А
+            | Пермский край, г.Соликамск, ул.Черняховского, 4А
             br
             | +7 (34253) 6-50-01
             br
             | +7 (34253) 6-50-04
             br
-            | +7 (34253) 6-50-06
+            | г.Пермь, Подлесная 43А 
             br
-            | +7 (34253) 6-50-07
+            | +7 (342) 258-00-70
         .col-md-6
           h1.pi-item Заявка на обучение
           include form
+  .container-fluid#map
+    .row
+      //- .col-lg-12
+      iframe(src="https://yandex.ru/map-widget/v1/-/CBQ-bAeqtB", width="100%", height="500", frameborder="0")
   script(src='https://code.jquery.com/jquery-3.1.1.min.js')
   script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
   script(src='https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js')

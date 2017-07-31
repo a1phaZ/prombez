@@ -24,12 +24,12 @@ mixin form(city, prof)
       label
         | Введите имя
         br
-      input.form-control(type='text', placeholder='Введите имя', name='name')
+      input.form-control(type='text', placeholder='Введите имя', name='name', required=true)
     .form-group
       label
         | Введите телефон
         br
-      input.form-control(type='phone', placeholder='Введите телефон', name='phone')
+      input.form-control(type='phone', placeholder='Введите телефон', name='phone', required=true)
     button.btn.btn-success.btn-lg(type='submit')
       | Отправить заявку
       br
