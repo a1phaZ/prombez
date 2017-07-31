@@ -11,80 +11,135 @@ block content
             a.nav-link(href='#home')
               | Главная
               br
-          li.nav-item
-            a.nav-link(href='#heading1')
-              | Секция 1
-              br
+          //- li.nav-item
+          //-   a.nav-link(href='#about')
+          //-     | О нас
+          //-     br
           li.nav-item
             a.nav-link(href='#teachers') Преподаватели
           li.nav-item
-            a.nav-link(href='#heading2')
-              | Секция 2
+            a.nav-link(href='#offers')
+              | Предложения
               br
           li.nav-item
             a.nav-link(href='#contact')
               | Контакты
               br
   #home.py-5.bg-primary.d-flex.h-100.align-items-center.text-center.opaque.opaque-fade-out(style='position: relative; background-image: url("./img/bg.jpg");min-height:100vh;')
-    .container
+    .container-fluid(style='background-color: rgba(247,247,247,.7);') 
       .row.text-gray-dark
-        .col-sm-12.col-md-6(style='background-color: rgba(247,247,247,.7);') 
+        .col-sm-12.col-md-6
           h1.pi-item Заявка на обучение 
           include form
         .col-md-6
-  #heading1.py-5.section
-    .container
-      .row
-        .col-md-6
-          img.img-fluid.img-thumbnail(src='https://pingendo.com/assets/photos/wireframe/photo-1.jpg')
-        .col-md-6
-          h1.text-primary
-            | HEADING 1
+          h1.pi-item
+            strong
+              | «Верхнекамский технический институт»
+          p.lead.text-left
+            | - это специализированное образовательное учреждение, существующее на рынке образовательных услуг уже более 10 лет. За этот период сформировался и успешно работает стабильный коллектив высококвалифицированных специалистов, осуществляющих чёткую организацию образовательного процесса в соответствии с нормативно-правовой документацией.
             br
-          p.lead
-            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            | pretium quis, sem.
+            | Условия обучения отвечают современным требованиям, а профессионализм преподавательского состава и наличие учебной и методической литературы позволяют обеспечить достойное обучение слушателей.
+            br
+            | Успешный опыт сотрудничества с организациями Пермского края позволяет нам обеспечивать потребности заказчиков в области обучения специалистов и персонала организаций по промышленной безопасности и охране труда.
+  //- #about.py-5.section
+  //-   .container
+  //-     .row
+  //-       .col-md-6
+  //-         img.img-fluid.img-thumbnail(src='./img/icon.png', alt='Верхнекамский технический институт')
+  //-       .col-md-6
+  //-         h1.text-primary
+  //-           | О нас
+  //-           br
+  //-         p.lead
+  //-           | Частное учреждение дополнительного профессионального образования «Верхнекамский технический институт» - это специализированное образовательное учреждение, существующее на рынке образовательных услуг уже более 10 лет. За этот период сформировался и успешно работает стабильный коллектив высококвалифицированных специалистов, осуществляющих чёткую организацию образовательного процесса в соответствии с нормативно-правовой документацией.
+  //-           br
+  //-           | Условия обучения отвечают современным требованиям, а профессионализм преподавательского состава и наличие учебной и методической литературы позволяют обеспечить достойное обучение слушателей.Успешный опыт сотрудничества с организациями Пермского края позволяет нам обеспечивать потребности заказчиков в области обучения специалистов и персонала организаций по промышленной безопасности и охране труда. 
   #teachers.py-5.text-center
     .container
       .row
-        .col-md-4
-          img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
-          h3 John Doe
-          p Developer
-        .col-md-4
-          img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
-          h3 John Doe
-          p Developer
-        .col-md-4
-          img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
-          h3 John Doe
-          p Developer
-  #heading2.py-5.section
+        .col-lg-12
+          h1.text-primary.text-center(id='')
+            | Преподаватели
+      .row
+        .col-lg-2.col-md-4.col-sm-6
+          img.d-block.mx-auto.img-fluid.my-3(src='./img/t/gaag_11.jpg', alt='Гаак Николай Николаевич')
+          h3 Гаак Николай Николаевич
+          p старший преподаватель 
+        .col-lg-2.col-md-4.col-sm-6
+          img.d-block.mx-auto.img-fluid.my-3(src='./img/t/sher_new.jpg', alt='Шерстобитов Анатолий Борисович')
+          h3 Шерстобитов Анатолий Борисович
+          p преподаватель 
+        .col-lg-2.col-md-4.col-sm-6
+          img.d-block.mx-auto.img-fluid.my-3(src='./img/t/vinogradova_15.jpg', alt='Виноградова Ольга Валентиновна')
+          h3 Виноградова Ольга Валентиновна 
+          p преподаватель 
+        .col-lg-2.col-md-4.col-sm-6
+          img.d-block.mx-auto.img-fluid.my-3(src='./img/t/gorshkova_19.jpg', alt='Горшкова Валентина Александровна')
+          h3 Горшкова Валентина Александровна
+          p преподаватель 
+        .col-lg-2.col-md-4.col-sm-6
+          img.d-block.mx-auto.img-fluid.my-3(src='./img/t/isaakova_17.jpg', alt='Исакова Татьяна Георгиевна')
+          h3 Исакова Татьяна Георгиевна
+          p преподаватель 
+        .col-lg-2.col-md-4.col-sm-6
+          img.d-block.mx-auto.img-fluid.my-3(src='./img/t/har.jpg', alt='Харькин Антон Сергеевич')
+          h3 Харькин Антон Сергеевич
+          p преподаватель 
+        //- .col-md-4
+        //-   img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
+        //-   h3 John Doe
+        //-   p Developer
+        //- .col-md-4
+        //-   img.d-block.mx-auto.rounded-circle.img-fluid.my-3(src='https://pingendo.com/assets/photos/user_placeholder.png')
+        //-   h3 John Doe
+        //-   p Developer
+  #offers.py-5.section
     .container
       .row
         .col-md-6
-          h1.text-primary(id='')
-            | HEADING 2
+          h1.text-primary.text-center(id='')
+            | Что мы предлагаем?
             br
           p.lead
-            | Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-            | pretium quis, sem.
+            | В современном мире, когда конкурентоспособность напрямую зависит от использования новых технологий, на первый план выходит уровень профессиональной подготовки сотрудников организаций. ЧУ ДПО «Верхнекамский технический институт» гарантирует Вам качественное обучение рабочих, руководителей и специалистов организаций.
         .col-md-6
-          img.img-fluid(src='https://pingendo.com/assets/photos/wireframe/photo-1.jpg')
+          .row
+            .col-sm-6.text-center
+              img.img-fluid(src='./img/1.png', alt="Надежность")
+              p
+                strong Надежность
+            .col-sm-6.text-center
+              img.img-fluid(src='./img/2.png', alt="Цена")
+              p
+                strong Цена
+            .col-sm-6.text-center
+              img.img-fluid(src='./img/3.png', alt="Доверие")
+              p
+                strong Доверие
+            .col-sm-6.text-center
+              img.img-fluid(src='./img/4.png', alt="Компетенция")
+              p
+                strong Компетенция
+
   #contact.bg-faded.py-5
     .container
       .row
         .col-md-6
-          h1.pi-item COMPANY
+          h1.pi-item Контакты
           p
-            strong Company name, Inc.
+            strong ЧУ ДПО "Верхнекамский технический институт" 
             br
-            | 795 Folsom Ave, Suite 600
+            | 618548, Россия, Пермский край,
             br
-            | San Francisco, CA 94107
+            | г.Соликамск, ул.Черняховского, 4А
             br
-            abbr(title='Phone') P:
-            | (123) 456-7890
+            | +7 (34253) 6-50-01
+            br
+            | +7 (34253) 6-50-04
+            br
+            | +7 (34253) 6-50-06
+            br
+            | +7 (34253) 6-50-07
         .col-md-6
           h1.pi-item Заявка на обучение
           include form
